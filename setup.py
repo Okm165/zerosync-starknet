@@ -14,3 +14,7 @@ def log_and_run(commands, description, cwd=None):
 log_and_run([
     "cairo-compile --cairo_path=. increment_batch.cairo --output increment_batch.json --no_debug_info --proof_mode", 
 ], "Compiling increment_batch program", cwd=".")
+
+log_and_run([
+    "cairo-compile --cairo_path=./src src/starkware/cairo/bootloaders/simple_bootloader/simple_bootloader.cairo --output simple_bootloader.json --no_debug_info --proof_mode", 
+], "Compiling simple bootloader program", cwd="cairo-lang")

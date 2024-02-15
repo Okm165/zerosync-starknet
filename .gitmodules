@@ -1,0 +1,12 @@
+[submodule "header_chain_parser"]
+	path = header_chain_parser
+	url = https://github.com/Okm165/header_chain_parser.git
+	branch = toolchain
+[submodule "cairo-lang"]
+	path = cairo-lang
+	url = https://github.com/Okm165/cairo-lang.git
+	branch = v0.12.0_zerosync
+[submodule "stone-prover"]
+	path = stone-prover
+	url = https://github.com/Okm165/stone-prover.git
+	branch = zerosync
