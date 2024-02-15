@@ -4,12 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-sandstorm-binary = { path = "../../sandstorm-mirror/binary" }
-sandstorm-layouts = { path = "../../sandstorm-mirror/layouts" }
-sandstorm-crypto = { path = "../../sandstorm-mirror/crypto" }
-sandstorm = { path = "../../sandstorm-mirror" }
-ministark-gpu = { version = "0.1", path = "../../ministark-mirror/gpu" }
-ministark = { path = "../../ministark-mirror" }
+sandstorm = { git="https://github.com/ZeroSync/sandstorm" }
+sandstorm-layouts = { git="https://github.com/ZeroSync/sandstorm", package = "sandstorm-layouts" }
+sandstorm-binary = { git="https://github.com/ZeroSync/sandstorm", package = "sandstorm-binary" }
+sandstorm-crypto = { git="https://github.com/ZeroSync/sandstorm", package = "sandstorm-crypto" }
+ministark = { git="https://github.com/ZeroSync/ministark", package = "ministark" }
+ministark-gpu = { git="https://github.com/ZeroSync/ministark", features = ["arkworks"] }
+
 ark-poly = { git = "https://github.com/andrewmilson/algebra", branch = "vec-allocator" }
 ark-std = "0.4"
 ark-ff = "0.4"
