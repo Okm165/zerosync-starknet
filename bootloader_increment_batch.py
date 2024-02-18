@@ -43,7 +43,7 @@ log_and_run([
     --print_output \
     --proof_mode \
     --print_info"
-], "Running bootloader-bridge step", cwd="cairo-lang")
+], "Running bootloader_increment_batch program in recursive layout", cwd="cairo-lang")
 
 log_and_run([
     "time ./cpu_air_prover \
@@ -53,4 +53,4 @@ log_and_run([
     --prover_config_file=cpu_air_prover_config.json \
     --parameter_file=cpu_air_params.json \
     -generate_annotations", 
-], "Proving bootloader program in recursive layout", cwd="stone-prover/e2e_test")
+], "Proving bootloader_increment_batch", cwd="stone-prover/e2e_test")

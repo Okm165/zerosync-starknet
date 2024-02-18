@@ -17,6 +17,6 @@ if __name__ == "__main__":
     with open(sys.argv[1], 'r') as file:
         program = fetch_compiled_program(file)
         program_hash = compute_hash_chain(program.data)
-    print(program_hash)
+    print(hex(program_hash))
 
 # python hash.py increment_batch.json
