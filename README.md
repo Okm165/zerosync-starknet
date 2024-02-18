@@ -42,7 +42,7 @@ The output should match the expected hash: `0x1ff70c9838765d61370402a62551f9c005
 Verify the bootloader hash of your program:
 
 ```bash
-python hash_program_bootloader.py increment_batch.json
+python hash_program_bootloader.py --program increment_batch.json
 ```
 
 The output should be: `0x34400f14ac9c420fb903fcf409cebaf1adca6c2ac4405c743d480fb6a07b9e2`.
