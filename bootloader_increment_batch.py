@@ -12,24 +12,12 @@ def log_and_run(commands, description, cwd=None):
         print(f"{Fore.RED}Error running command '{full_command}': {e}\n{Style.RESET_ALL}")
 
 log_and_run([
-    'prev_proof="increment_batch_proof.json"',
-    'increment_input_template="increment_input_template.json"',
-    'outputFile="increment_batch_input.json"',
-    'jq -n \
-    --argfile prev_proof "$prev_proof" \
-    -f "$increment_input_template" > "$outputFile"'
+    'python increment_batch_input.py'
 ], "Preapring increment_batch input", cwd=".")
 
 log_and_run([
-    'program_file="increment_batch.json"', 
-    'program_input_file="increment_batch_input.json"',
-    'simple_bootloader_input_template="cairo-lang/simple_bootloader_input_template.json"',
-    'outputFile="cairo-lang/simple_bootloader_input.json"',
-    'jq -n \
-    --argfile program "$program_file" \
-    --argfile program_input "$program_input_file" \
-    -f "$simple_bootloader_input_template" > "$outputFile"'
-], "Preapring bootloader_increment_batch input", cwd=".")
+    'python bootloader_increment_batch_input.py'
+], "Preapring increment_batch input", cwd=".")
 
 log_and_run([
     "time cairo-run \
