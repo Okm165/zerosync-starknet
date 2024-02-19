@@ -1,0 +1,14 @@
+[package]
+name = "starknet"
+version = "0.1.0"
+edition = "2023_10"
+
+[tool.sncast.mainnet]
+account = "mainnet"
+accounts-file = "~/.starknet_accounts/starknet_open_zeppelin_accounts.json"
+url = "https://starknet-mainnet.public.blastapi.io/rpc/v0_6"
+
+[tool.sncast.testnet]
+account = "testnet"
+accounts-file = "~/.starknet_accounts/starknet_open_zeppelin_accounts.json"
+url = "https://free-rpc.nethermind.io/goerli-juno/"

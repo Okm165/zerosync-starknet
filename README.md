@@ -80,10 +80,13 @@ Verify the proof locally with the bootloaded incrementer and prove its execution
 python bootloader_increment_batch.py
 ```
 
-### Checkout Proof
+### Verify proof on StarkNet
 
 Check out the proof:
 
 ```bash
-cat bootloader_proof.json
+cd starknet
+cargo run --release < ../stone-prover/e2e_test/bootloader_proof.json > calldata
+./call.sh
+cd ../
 ```
