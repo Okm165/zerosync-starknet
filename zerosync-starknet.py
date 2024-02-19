@@ -12,8 +12,11 @@ def log_and_run(commands, description, cwd=None):
         print(f"{Fore.RED}Error running command '{full_command}': {e}\n{Style.RESET_ALL}")
 
 log_and_run([
-    "curl https://zerosync.org/demo/proofs/latest/air-public-input.json > air-public-input.json \
-    curl https://zerosync.org/demo/proofs/latest/aggregated_proof.bin > aggregated_proof.bin"
+    "curl https://zerosync.org/demo/proofs/latest/air-public-input.json > air-public-input.json"
+], "Download Zerosync Proof Pair", cwd=".")
+
+log_and_run([
+    "curl https://zerosync.org/demo/proofs/latest/aggregated_proof.bin > aggregated_proof.bin"
 ], "Download Zerosync Proof Pair", cwd=".")
 
 log_and_run([
@@ -22,7 +25,7 @@ log_and_run([
 
 log_and_run([
     "python bootloader_increment_batch.py"
-], "Verify Proof Locally with Bootloaded Incrementer and Prove Its Execution", cwd="cairo-lang")
+], "Verify Proof Locally with Bootloaded Incrementer and Prove Its Execution", cwd=".")
 
 log_and_run([
     "cargo run --release < ../stone-prover/e2e_test/bootloader_proof.json > calldata && ./call_contract.sh"
