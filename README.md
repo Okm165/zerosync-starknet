@@ -81,12 +81,9 @@ python bootloader_increment_batch.py
 ```
 
 ### Verify proof on StarkNet
-
-Check out the proof:
-
+Parse and send proof to StarkNet Cairo1 verifier:
 ```bash
 cd starknet
-cargo run --release < ../stone-prover/e2e_test/bootloader_proof.json > calldata
-./call.sh
+cargo run --release < ../stone-prover/e2e_test/bootloader_proof.json > calldata && ./call_contract.sh
 cd ../
 ```
