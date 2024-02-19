@@ -1,6 +1,7 @@
 # Zerosync-StarkNet Proof Verification Toolkit
 
-This toolkit facilitates the verification and validation of programs using the Zerosync protocol. Below are the setup instructions and usage guidelines to seamlessly integrate Zerosync proofs into your workflow.
+This toolkit facilitates the verification and validation of the Zerosync protocol on StarkNet.
+You can verify Bitcoin blockchain on StarkNet any time by yourself.
 
 ## Setup
 
