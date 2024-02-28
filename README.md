@@ -81,7 +81,7 @@ Verify the proof locally with the bootloaded incrementer and prove its execution
 python bootloader_increment_batch.py
 ```
 
-### Verify proof on StarkNet
+### Verify Bootloader proof of execution on StarkNet
 Parse and send proof to StarkNet Cairo1 verifier:
 ```bash
 cd starknet
